@@ -4,7 +4,7 @@
 添加依赖或加载依赖包
 
 ```xml
- 		<dependency>
+ <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>1.8</version>
