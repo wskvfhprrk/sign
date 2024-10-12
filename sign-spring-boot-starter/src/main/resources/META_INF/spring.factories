@@ -1,0 +1,3 @@
+# 在 spring.factories 文件中确保自动配置类已被注册
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.hejz.config.SignatureAutoConfiguration
