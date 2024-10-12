@@ -6,8 +6,8 @@
 
 ```xml
 <dependency>
-    <groupId>com.hejz</groupId>
+    <groupId>com.hejz.util</groupId>
     <artifactId>sign-spring-boot-starter</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version><--实际版本-->
 </dependency>
 ```
