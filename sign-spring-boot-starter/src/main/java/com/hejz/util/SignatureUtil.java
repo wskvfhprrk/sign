@@ -7,12 +7,6 @@ import java.util.Base64;
 import java.util.Random;
 
 public class SignatureUtil {
-    /**
-     * 签名数据：data + timestamp + nonce + secretKey
-     * 生成签名：使用 HMAC-SHA256 加密生成签名。
-     * 时间有效性：签名创建时会带上时间戳，验证时检查时间是否在10分钟（600秒）以内。
-     * 随机字符串（nonce）：每次生成一个随机字符串，以避免重放攻击。
-     */
 
     private static final String HMAC_SHA256_ALGORITHM = "HmacSHA256";
     private static final long MAX_VALID_DURATION = 10 * 60 * 1000; // 10分钟的毫秒数

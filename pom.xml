@@ -14,7 +14,7 @@
     <version>1.0.0</version>
     <modules>
         <module>sign-spring-boot-starter</module>
-        <module>test-sign</module>
+        <module>demo</module>
     </modules>
     <packaging>pom</packaging>
 
