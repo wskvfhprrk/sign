@@ -4,7 +4,7 @@ public class SignVo {
     private String data;
     private long timestamp;
     private String nonce;
-    private String signature;
+    private String sign;
 
     public String getData() {
         return data;
@@ -30,11 +30,11 @@ public class SignVo {
         this.nonce = nonce;
     }
 
-    public String getSignature() {
-        return signature;
+    public String getSign() {
+        return sign;
     }
 
-    public void setSignature(String signature) {
-        this.signature = signature;
+    public void setSign(String sign) {
+        this.sign = sign;
     }
 }

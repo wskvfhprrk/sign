@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Random;
 
-public class SignatureUtil {
+public class SignUtil {
 
     private static final String HMAC_SHA256_ALGORITHM = "HmacSHA256";
     private static final long MAX_VALID_DURATION = 10 * 60 * 1000; // 10分钟的毫秒数

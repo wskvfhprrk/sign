@@ -1,11 +1,25 @@
 package com.hejz.util.dto;
 
+/**
+ * 解密所需要参数
+ */
 public class VerifyDto {
+    /**
+     * 数据字符串
+     */
     private String data;
-    private String secretKey;
+    /**
+     * 时间戳
+     */
     private long timestamp;
+    /**
+     * 一次性数据
+     */
     private String nonce;
-    private String signature;
+    /**
+     * 加密字符串
+     */
+    private String sign;
 
     public String getData() {
         return data;
@@ -15,13 +29,6 @@ public class VerifyDto {
         this.data = data;
     }
 
-    public String getSecretKey() {
-        return secretKey;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
 
     public long getTimestamp() {
         return timestamp;
@@ -39,11 +46,11 @@ public class VerifyDto {
         this.nonce = nonce;
     }
 
-    public String getSignature() {
-        return signature;
+    public String getSign() {
+        return sign;
     }
 
-    public void setSignature(String signature) {
-        this.signature = signature;
+    public void setSign(String sign) {
+        this.sign = sign;
     }
 }
