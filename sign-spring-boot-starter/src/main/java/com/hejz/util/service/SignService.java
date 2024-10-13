@@ -81,7 +81,7 @@ public class SignService {
      * @return 验证通过就为真，不通过就是假
      * @throws Exception
      */
-    public boolean verifyData(String data, String sign, String secretKey, long timestamp, String nonce) throws Exception {
+    public boolean verifyData(String sign,String data, long timestamp, String nonce,  String secretKey) throws Exception {
         return SignUtil.verifySignature(data, secretKey, sign, timestamp, nonce);
     }
 
@@ -93,7 +93,7 @@ public class SignService {
      * @throws Exception
      */
     public Boolean verifyData(VerifyDto dto, String secretKey) throws Exception {
-        return verifyData(dto.getData(), secretKey, dto.getSign(), dto.getTimestamp(), dto.getNonce());
+        return verifyData(dto.getSign(), dto.getData(), dto.getTimestamp(), dto.getNonce(), secretKey);
     }
     /**
      * 验证签名，检查时间戳、随机字符串和数据完整性
@@ -107,6 +107,6 @@ public class SignService {
         String sign=dto.getSign();
         long timestamp=dto.getTimestamp();
         String nonce=dto.getNonce();
-        return SignUtil.verifySignature(data, secretKey, sign, timestamp, nonce);
+        return verifyData(dto.getSign(),dto.getData(), dto.getTimestamp(), dto.getNonce(), secretKey);
     }
 }

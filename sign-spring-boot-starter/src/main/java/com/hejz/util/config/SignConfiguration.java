@@ -1,13 +1,9 @@
 package com.hejz.util.config;
 
-import com.hejz.util.service.SignService;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = {"com.hejz.util"})
 public class SignConfiguration {
-    @Bean
-    public SignService signService() {
-        return new SignService();
-    }
 }
