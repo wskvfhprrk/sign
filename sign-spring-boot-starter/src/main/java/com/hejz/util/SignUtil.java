@@ -22,7 +22,7 @@ public class SignUtil {
     }
 
     // 验证签名是否有效
-    public static boolean verifySignature(String data, String secretKey, String signature, long timestamp, String nonce) throws Exception {
+    public static boolean verifySignature(String data, String secretKey, String sign, long timestamp, String nonce) throws Exception {
         // 检查时间戳是否在10分钟内
         long currentTime = System.currentTimeMillis();
         if (Math.abs(currentTime - timestamp) > MAX_VALID_DURATION) {
@@ -31,7 +31,7 @@ public class SignUtil {
 
         // 生成新的签名并与传入的签名进行对比
         String generatedSignature = generateSignature(data, secretKey, timestamp, nonce);
-        return generatedSignature.equals(signature);
+        return generatedSignature.equals(sign);
     }
 
     // 生成随机字符串 (nonce)
